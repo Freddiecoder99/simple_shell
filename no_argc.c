@@ -3,7 +3,7 @@
 
 int main(int ac, char **av)
 {
-        int i;
+	(void)ac;
 
         printf("argv content is argv[]\n");
 
