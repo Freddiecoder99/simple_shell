@@ -2,14 +2,24 @@
 
 /**
  * main - prints the environment
+ * @ac: argument count
+ * @av: argument vector
+ * @env: environment variables
  *
  * Return: Always 0.
  */
 int main(int ac, char **av, char **env)
 {
-    unsigned int i;
+    (void)ac;
+    (void)av;
 
-    i = 0;
+    #pragma GCC diagnostic push
+    #pragma GCC diagnostic ignored "-Wdeclaration-after-statement"
+
+    unsigned int i = 0;
+
+    #pragma GCC diagnostic pop
+
     while (env[i] != NULL)
     {
         printf("%s\n", env[i]);
