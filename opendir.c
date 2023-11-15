@@ -8,7 +8,7 @@ int main()
         char *path = ".";
         struct dirent *read_dir;
 
-        //call openddir function to open the dir and store the result
+        /*call openddir function to open the dir and store the result*/
         dir = opendir(path);
         if (dir == NULL)
         {
@@ -19,10 +19,10 @@ int main()
         {
                 if (read_dir->d_type == DT_REG)
                 {
-                        //if there are files, just print their names
+                        /*if there are files, just print their names*/
                         printf("FILE: %s\n", read_dir->d_name);
                 }
-                //checking for dirs
+                /*checking for dirs*/
                 else if (read_dir->d_type == DT_DIR)
                 {
                         printf("DIR: %s\n", read_dir->d_name);
