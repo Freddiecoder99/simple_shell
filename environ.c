@@ -11,7 +11,7 @@ int main(void)
 
         while (environ[i] != NULL)
         {
-                printf("%s\n", environ[i]);
+                printf("%p\n", (void *)environ[i]);
                 i++;
         }
         return (0);
