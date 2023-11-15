@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-//creation of handler function
+/*creation of handler function*/
 void signalHandler(int signal)
 {
         printf("Received signal is: %d\n", signal);
