@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void strtok(const char *str, char delimeter)
+void custom_strtok(const char *str, char delimeter)
 {
         int len = strlen(str);
         char word[len + 1];
@@ -23,5 +23,13 @@ void strtok(const char *str, char delimeter)
                 }
 
         }
+}
+	int main(void)
+
+{
+    const char *example_string = "This is a sample string";
+    char delimiter = ' ';
+
+    custom_strtok(example_string, delimiter);
         return 0;
 }
