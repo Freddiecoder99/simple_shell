@@ -5,6 +5,9 @@ extern char **environ;
 
 int main(int ac, char **av, char **env)
 {
-        printf("%p\n %p\n", environ, env);
+	(void)ac;
+	(void)av;
+
+        printf("%p\n %p\n", (void *)environ, (void *)env);
         return (0);
 }
