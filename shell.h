@@ -1,18 +1,15 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _SHELL_H
+#define _SHELL_H
 
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <sys/types.h>
+#include <unistd.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <string.h>
+#include <sys/types.h>
 
-/* Helper Funcitons */
-char *get_file_path(char *file_name);
-char *get_file_loc(char *path, char *file_name);
-int startsWithForwardSlash(const char *str);
+/* ge_prompt.c*/
+void ge_prompt(char **agv, char **env);
 
-
-#endif /* MAIN_H */
+#endif
