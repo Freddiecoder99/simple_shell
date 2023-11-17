@@ -27,11 +27,10 @@ int ge_myexit(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
-
 /**
  * ge_mycd - function that change the current directory of the process
  * @info: argument
- * Return: Always (0) 
+ * Return: Always (0)
  */
 int ge_mycd(info_t *info)
 {
@@ -88,9 +87,8 @@ int ge_myhelp(info_t *info)
 	char **arg_array;
 
 	arg_array = info->argv;
-	_myputs("Implement the help function. Trying to gather information about it \n");
+	_myputs("Implement the help function. Trying to it hard \n");
 	if (0)
 		_myputs(*arg_array); /* temp att_unused workaround */
 	return (0);
 }
-

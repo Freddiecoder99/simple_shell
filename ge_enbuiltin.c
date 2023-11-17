@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *ge _environ - function that print current  environment
+ * ge_environ - function that print current  environment
  * @info: parameter struct
  *
  * Return: Always (0)
@@ -23,7 +23,7 @@ char *ge_getenv(info_t *info, const char *name)
 	list_t *node = info->env;
 	char *par = NULL;
 
-	for (; node != NULL; node = node ->next)
+	for (; node != NULL; node = node->next)
 	{
 		par = starts_with(node->str, name);
 		if (par && *par)

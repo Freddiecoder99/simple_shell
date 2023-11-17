@@ -56,7 +56,7 @@ char **list_to_strings(list_t *head)
 
 
 /**
- * print_list - prints all elements of a list_t linked list
+ * print_lists - prints all elements of a list_t linked list
  * @f_node: pointer to first node
  *
  * Return: size of list

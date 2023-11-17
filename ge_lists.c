@@ -76,7 +76,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 
 /**
  * print_linklist - function that print the link list
- * @h: pointer to first node
+ * @fnode: pointer to first node
  *
  * Return: size of list
  */
@@ -134,7 +134,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 
 /**
  * free_gelist - function that frees all nodes of a list
- * @head_ptr: address of pointer
+ * @headpts: address of pointer
  *
  * Return: void
  */

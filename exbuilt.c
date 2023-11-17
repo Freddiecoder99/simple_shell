@@ -38,7 +38,7 @@ int unset_alias(info_t *info, char *strg)
 /**
  * set_alias - sets alias to string
  * @info: parameter struct
- * @str: the string alias
+ * @strg: the string alias
  *
  * Return: Always 0 on success, 1 on error
  */
@@ -80,8 +80,9 @@ int print_alias(list_t *node)
 }
 
 /**
- *ge _alias - function that mimic the alias builtin (man alias)
- * @info: parameter pointer 
+ * ge_alias - function that mimic the alias builtin (man alias)
+ * @info: parameter pointer
+ *g
  * Return: Always (0)
  */
 int ge_alias(info_t *info)

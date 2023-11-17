@@ -68,10 +68,10 @@ typedef struct liststr
  * @alias: the alias node
  * @env_changed: on if environ was changed
  * @status: the return status of the last exec'd command
- * @cmd_buf: address of pointer to cmd_buf, on if chaining
- * @cmd_buffer_type: CMD_type ||, &&, ;
+ * @cmd_buffer: address of pointer to cmd_buf, on if chaining
+ * @cmd_buf_type: CMD_type ||, &&, ;
  * @readfd: the fd from which to read line input
- * @histcount: the history line number count
+ * @counthist: the history line number count
  */
 typedef struct passinfo
 {

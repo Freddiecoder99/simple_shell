@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * input_buf - function that read input buffer chained command 
+ * input_buf - function that read input buffer chained command
  * @info: parameter struct
  * @buffer: address of buffer
  * @len: address of len var
@@ -27,13 +27,12 @@ ssize_t input_buf(info_t *info, char **buffer, size_t *len)
 		{
 			if ((*buffer)[byteread - 1] == '\n')
 			{
-				(*buffer)[byteread - 1] = '\0'; 
+				(*buffer)[byteread - 1] = '\0';
 				byteread--;
 			}
 			info->linecount_flag = 1;
 			ge_recomments(*buffer);
 			build_history_list(info, *buffer, info->counthist++);
-			
 			*len = byteread;
 			info->cmd_buffer = buffer;
 		}

@@ -22,7 +22,7 @@ char **get_environ(info_t *info)
  * @info: parameter struct
  * @var: variable property
  *
- * Return: (1) on delete, else 0 
+ * Return: (1) on delete, else 0
  */
 int ge_unsetenv(info_t *info, char *var)
 {
