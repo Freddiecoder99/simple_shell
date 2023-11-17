@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * hsh - main shell function
+ * scell - main shell function
  * @info: struct parameter
  * @av: argument vector
  *
  * Return: Always (0) on success, (1) on error, or error code
  */
-int hsh(info_t *info, char **av)
+int scell(info_t *info, char **av)
 {
 	int builtin_ret = 0;
 	ssize_t r = 0;
