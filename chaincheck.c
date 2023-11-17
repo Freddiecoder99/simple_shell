@@ -50,12 +50,23 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t j = *p;
 
-	if ((info->cmd_buf_type == CMD_AND && info->status) /** check what to do */
-			|| (info->cmd_buf_type == CMD_OR && !info->status))
+	if (info->cmd_buf_type == CMD_AND)
 	{
-			buf[i] = '\0';
+		if (info->status)
+		{
+			buf[i] = 0;
 			j = len;
+		}
 	}
+	if (info->cmd_buf_type == CMD_OR)
+	{
+		if (!info->status)
+		{
+			buf[i] = 0;
+			j = len;
+		}
+	}
+
 	*p = j;
 }
 
