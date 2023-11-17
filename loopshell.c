@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * scell - main shell function
  * @info: struct parameter
@@ -12,12 +11,14 @@ int scell(info_t *info, char **av)
 	int builtin_ret = 0;
 	ssize_t r = 0;
 
-	while (r != -1 && builtin_ret != -2)
-	{
+	do {
 		initiate_info(info);
+
 		if (interactive(info))
+		{
 			_myputs("$ ");
-		_eputchar(BUF_FLUSH);
+			_eputchar(BUF_FLUSH);
+		}
 		r = get_input(info);
 		if (r != -1)
 		{
@@ -29,7 +30,7 @@ int scell(info_t *info, char **av)
 		else if (interactive(info))
 			_myputchar('\n');
 		free_fields(info, 0);
-	}
+	} while (r != -1 && builtin_ret != -2);
 	write_history(info);
 	free_fields(info, 1);
 	if (!interactive(info) && info->status)
@@ -42,7 +43,6 @@ int scell(info_t *info, char **av)
 	}
 	return (builtin_ret);
 }
-
 /**
  * find_builtin - finds a builtin command
  * @info: the parameter & return info struct
