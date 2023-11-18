@@ -10,18 +10,24 @@
  */
 int isschain(info_t *par, char *buf, size_t *p)
 {
-	int chain_type = *p;
+	int chain_type = par->cmd_buf_type;
 	size_t j = *p;
 
 	switch (buf[j])
 	{
 		case '|':
 			if (buf[j + 1] == '|')
+			{
 				chain_type = CMD_OR;
+				j++;
+			}
 			break;
 		case '&':
 			if (buf[j + 1] == '&')
+			{
 				chain_type = CMD_AND;
+				j++;
+			}
 			break;
 		case ';':
 			chain_type = CMD_CHAIN;
